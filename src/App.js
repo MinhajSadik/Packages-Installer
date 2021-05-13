@@ -20,29 +20,36 @@ function App() {
 
   return (
     <UserContext.Provider value={[user, setUser]}>
-
       <Router>
+
         <div className="app">
+          
           <Switch>
             <Route>
-              <Header></Header>
+              <Header/>
             </Route>
           </Switch>
+
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
+
             <Route path="/about">
               <About />
             </Route>
+
             <Route path="/login">
               <Login />
             </Route>
+
             <Route path="/documentation">
               <Documentation />
             </Route>
           </Switch>
+
         </div>
+
       </Router>
     </UserContext.Provider>
   );
